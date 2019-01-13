@@ -11,14 +11,158 @@
   </head>
   <body>
     <!-- BEGIN content -->
-    <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <li>Item1</li>
-      <li>Item2</li>
+    <div class="main">
+      <!-- begin steps -->
+      <div class="steps ">
+        <!-- states: disabled, active, done -->
+        <div class="steps__header">
+          <ul class="steps__list">
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="active" data-step="1">
+                <div class="steps__title">Company information</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="2">
+                <div class="steps__title">Contract Information</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="3">
+                <div class="steps__title">Contract details</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="4">
+                <div class="steps__title">Email confirmation</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="5">
+                <div class="steps__title">Sales Order Form</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="6">
+                <div class="steps__title">Payment details</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="steps__progress">
+          <div class="steps__progress-line" data-step="line">
+            <div class="steps__progress-in" data-step="in">
+              <div class="steps__progress-row">
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end steps -->
+      <div class="main__document">
+        <div class="main__body">
+          <div class="form">
+            <div class="form__row">
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="username">User Name</label>
+                  <div class="field__control">
+                    <input type="text" class="input" id="username" placeholder="User Name">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="firstname">First Name</label>
+                  <div class="field__control">
+                    <input type="text" class="input" id="firstname" placeholder="First Name">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="lastname">Last Name</label>
+                  <div class="field__control">
+                    <input type="text" class="input" id="lastname" placeholder="Last Name">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="companyname">Company Name</label>
+                  <div class="field__control">
+                    <input type="text" class="input" id="companyname" placeholder="Company Name">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col form__col_wide">
+                <div class="field">
+                  <label class="label field__label" for="ein">Employee Identification Number</label>
+                  <div class="field__control">
+                    <input type="text" class="input" id="ein" placeholder="Employee Identification Number">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="selectproduct">Choose Product</label>
+                  <div class="field__control">
+                    <select class="select" id="selectproduct">
+                      <option selected>Select product</option>
+                      <option value="Wireless Standard Metro by T-Mobile">Wireless Standard Metro by T-Mobile</option>
+                      <option value="Elevate Exclusive">Elevate Exclusive</option>
+                      <option value="Wireless Standard Tracfone Exclusive">Wireless Standard Tracfone Exclusive</option>
+                      <option value="Multi Carrier">Multi Carrier</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="masterdealer">Choose Master Dealer</label>
+                  <div class="field__control">
+                    <select class="select" id="masterdealer">
+                      <option selected>Select Master </option>
+                      <option value="I don&#39;t have Master Dealer">I don&#39;t have Master Dealer</option>
+                      <option value="Amaritel">Amaritel</option>
+                      <option value="AWI">AWI</option>
+                      <option value="Actify">Actify</option>
+                      <option value="Hyperlink">Hyperlink</option>
+                      <option value="VIP">VIP</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer main__footer">
+          <div class="footer__box">
+            <button class="btn btn_lg btn_red" data-animation="ripple">Cancel</button>
+          </div>
+          <div class="footer__box">
+            <button class="btn btn_lg btn_darkgray" data-step-direction="next" data-animation="ripple-white">Next</button>
+          </div>
+        </footer>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

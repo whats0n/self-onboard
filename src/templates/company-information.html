@@ -1,0 +1,123 @@
+---
+title: Company Information
+activeStep: 1
+noPrev: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="form">
+		<div class="form__row">
+			<div class="form__col">
+				{{mixins.field({
+					for: 'username',
+					label: 'User Name',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'User Name',
+							title: 'Please enter your Username',
+							id: 'username'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'firstname',
+					label: 'First Name',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'First Name',
+							title: 'Please enter your First Name',
+							id: 'firstname'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'lastname',
+					label: 'Last Name',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Last Name',
+							title: 'Please enter your Last Name',
+							id: 'lastname'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'companyname',
+					label: 'Company Name',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Company Name',
+							title: 'Please enter your Company Name',
+							id: 'companyname'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col form__col_wide">
+				{{mixins.field({
+					for: 'ein',
+					label: 'Employee Identification Number',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Employee Identification Number',
+							title: 'Please enter your Employee Identification Number',
+							id: 'ein'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'selectproduct',
+					label: 'Choose Product',
+					mixins: {
+						type: 'select',
+						props: {
+							id: 'selectproduct',
+							placeholder: 'Select product',
+							options: [
+								'Wireless Standard Metro by T-Mobile',
+								'Elevate Exclusive',
+								'Wireless Standard Tracfone Exclusive',
+								'Multi Carrier'
+							]
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'masterdealer',
+					label: 'Choose Master Dealer',
+					mixins: {
+						type: 'select',
+						props: {
+							id: 'masterdealer',
+							placeholder: 'Select Master ',
+							options: [
+								"I don't have Master Dealer",
+								'Amaritel',
+								'AWI',
+								'Actify',
+								'Hyperlink',
+								'VIP'
+							]
+						}
+					}
+				})}}
+			</div>
+		</div>
+	</div>
+{% endblock %}

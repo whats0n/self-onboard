@@ -1,0 +1,91 @@
+.btn
+	display: inline-block
+	vertical-align: top
+
+	padding: 0 10px
+	margin: 0
+	border: none
+	min-width: 40px
+	height: 40px
+
+	color: $darkGray
+	background: $lightGray
+	
+	font-size: 16px
+	font-weight: 300
+	line-height: 40px
+	text-align: center
+	text-decoration: none
+
+	white-space: nowrap
+
+	transition: background 0.175s ease, box-shadow 0.175s ease, opacity 0.175s ease
+
+	cursor: pointer
+	user-select: none
+	&:active
+		color: $darkGray
+		background: $lightGrayActive
+		box-shadow: inset 2px 2px 6px rgba($black, 0.2)
+	&_block
+		width: 100%
+	&_lg
+		padding: 0 15px
+		min-width: 60px
+		height: 60px
+		font-size: 19px
+		line-height: 60px
+	&_green
+		color: $white
+		background: $green
+		&:active
+			color: $white
+			background: $green
+	&_red
+		color: $white
+		background: $red
+		&:active
+			color: $white
+			background: $red
+	&_blue
+		color: $white
+		background: $primary
+		&:active
+			color: $white
+			background: $primary
+	&_darkgray
+		color: $white
+		background: $darkGray
+		&:active
+			color: $white
+			background: $darkGray
+	&_primary
+		color: $white
+		background: $primary
+		&:active
+			color: $white
+			background: $primary
+	&:disabled,
+	&.is-disabled
+		opacity: 0.5
+		pointer-events: none
+
+button.btn 
+	line-height: normal
+
+.btn-delete
+	display: inline-block
+	vertical-align: top
+	width: 60px
+	height: 60px
+	background: none
+	font-size: 0
+	line-height: 60px
+	&:active
+		svg
+			fill: darken($red, 15%)
+	svg
+		display: inline-block
+		vertical-align: middle
+		fill: $red
+		font-size: 18px

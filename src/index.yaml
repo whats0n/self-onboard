@@ -1,5 +1,10 @@
 ProjectTitle: self-onboard
 
 PageList:
-- file: page.html
-  ready: 50
+- file: company-information.html
+- file: contact-information.html
+- file: contract-details.html
+- file: email-confirmation.html
+- file: sales-order-form.html
+- file: locations-information.html
+- file: payment-details.html

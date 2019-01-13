@@ -1,0 +1,150 @@
+---
+title: Contact Information
+activeStep: 2
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="form">
+		<div class="form__row">
+			<div class="form__col">
+				{{mixins.field({
+					for: 'mainphone',
+					label: 'Main Phone',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Main Phone',
+							title: 'Please enter your Main Phone',
+							id: 'mainphone'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'mobilephone',
+					label: 'Mobile Phone',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Mobile Phone',
+							title: 'Please enter your Mobile Phone',
+							id: 'mobilephone'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col form__col_wide">
+				{{mixins.field({
+					for: 'email',
+					label: 'Email address',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'name@example.com',
+							title: 'Please enter your E-Mail',
+							id: 'email',
+							type: 'email'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'addressline1',
+					label: 'Address Line 1',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Address Line 1',
+							title: 'Please enter your Address Line 1',
+							id: 'addressline1'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'addressline2',
+					label: 'Address Line 2',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Address Line 2',
+							title: 'Please enter your Address Line 2',
+							id: 'addressline2'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'state',
+					label: 'State',
+					mixins: {
+						type: 'select',
+						props: {
+							id: 'state',
+							placeholder: 'Select state',
+							options: [
+								'AL',
+								'AK',
+								'AZ',
+								'AR',
+								'CA',
+								'CO',
+								'CT',
+								'DE',
+								'NY'
+							]
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'city',
+					label: 'City',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'City',
+							title: 'Please enter your City',
+							id: 'city'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'zip',
+					label: 'ZIP',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'ZIP',
+							title: 'Please enter your ZIP',
+							id: 'zip'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'country',
+					label: 'Country',
+					mixins: {
+						type: 'select',
+						props: {
+							id: 'country',
+							options: [
+								'United States'
+							]
+						}
+					}
+				})}}
+			</div>
+		</div>
+	</div>
+{% endblock %}

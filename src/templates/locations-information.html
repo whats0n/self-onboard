@@ -1,0 +1,70 @@
+---
+title: Locations Information
+activeStep: 6
+customSteps: [
+	{ title: 'Company information' },
+	{ title: 'Contact information' },
+	{ title: 'Contract details' },
+	{ title: 'Email confirmation' },
+	{ title: 'Sales Order Form' },
+	{ title: 'Location information' },
+	{ title: 'Payment details' }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<table class="table table_locations-information">
+		<thead>
+			<tr>
+				<th class="table__number">#</th>
+				<th class="table__sales-portal-id">Sales portal id</th>
+				<th class="table__dealer-code">Dealer code</th>
+				<th class="table__street">Street</th>
+				<th class="table__city">City</th>
+				<th class="table__state">State</th>
+				<th class="table__zip">Zip</th>
+				<th class="table__btn"></th>
+				<th class="table__btn"></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in [
+				{
+					salesPortalId: '34315',
+					dealerCode: '0018000001LWybAAAT',
+					street: '65A Westchester Square',
+					city: 'Bronx',
+					state: 'NY',
+					zip: '10461'
+				},
+				{
+					street: '-',
+					city: '-',
+					state: '-',
+					zip: '-'
+				}
+			] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>
+						<input type="text" class="input" value="{{item.salesPortalId}}">
+					</td>
+					<td>
+						<input type="text" class="input" value="{{item.dealerCode}}">
+					</td>
+					<td>{{item.street | safe}}</td>
+					<td>{{item.city | safe}}</td>
+					<td>{{item.state | safe}}</td>
+					<td>{{item.zip | safe}}</td>
+					<td>
+						<button class="btn btn_block">Clear</button>
+					</td>
+					<td>
+						<button class="btn btn_primary btn_block">Submit</button>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

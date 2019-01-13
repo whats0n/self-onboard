@@ -1,3 +1,83 @@
-{% macro icon(i) %}
-<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% macro icon(i, class) %}
+	<svg class="icon icon-{{i}} {{class}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro input(props) %}
+	<input
+		type="{{props.type or 'text'}}"
+		class="input"
+		{% if props.id %}id="{{props.id}}"{% endif %}
+		{% if props.placeholder %}placeholder="{{props.placeholder}}"{% endif %}
+		{% if title %}title="{{props.title}}"{% endif %}
+	>
+{% endmacro %}
+
+{% macro select(props) %}
+	<select
+		class="select"
+		{% if props.id %}id="{{props.id}}"{% endif %}
+	>
+		{% if props.placeholder %}<option selected>{{props.placeholder}}</option>{% endif %}
+		{% for item in props.options %}
+			<option value="{{item}}">{{item}}</option>
+		{% endfor %}
+	</select>
+{% endmacro %}
+
+{% macro expirationDate(props) %}
+	<div class="expiration-date">
+		<div class="expiration-date__col">
+			<select class="select" id="month">
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			</select>
+		</div>
+		<div class="expiration-date__col">
+			<select class="select" id="year">
+				<option>2018</option>
+				<option>2019</option>
+				<option>2020</option>
+				<option>2021</option>
+				<option>2022</option>
+			</select>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro field(props) %}
+	<div class="field">
+		<label class="label field__label" for="{{props.for}}">{{props.label}}:</label>
+		<div class="field__control">
+			{% if props.mixins.type == 'input' %}
+				{{input(props.mixins.props)}}
+			{% endif %}
+			{% if props.mixins.type == 'select' %}
+				{{select(props.mixins.props)}}
+			{% endif %}
+			{% if props.mixins.type == 'expirationDate' %}
+				{{expirationDate(props.mixins.props)}}
+			{% endif %}
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro checkbox(props) %}
+	<label class="checkbox {{props.classList}}">
+		<input type="checkbox" {{props.inputAttrs | safe}}>
+		<span class="checkbox__icon">
+			{{icon('check')}}
+		</span>
+		{% if props.text %}
+			<span class="checkbox__text">{{props.text}}</span>
+		{% endif %}
+	</label>
 {% endmacro %}

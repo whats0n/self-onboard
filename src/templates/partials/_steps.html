@@ -1,0 +1,37 @@
+{% set steps = [
+	{ title: 'Company information' },
+	{ title: 'Contact information' },
+	{ title: 'Contract details' },
+	{ title: 'Email confirmation' },
+	{ title: 'Sales Order Form' },
+	{ title: 'Payment details' }
+] %}
+<!-- begin steps -->
+<div class="steps {{stepsClassList}}">
+	<!-- states: disabled, active, done -->
+	<div class="steps__header">
+		<ul class="steps__list">
+			{% for item in customSteps or steps %}
+				<li class="steps__item">
+					<a href="#" class="steps__in" {% if activeStep == loop.index %}data-step-state="active"{% else %}data-step-state="disabled"{% endif %} data-step="{{loop.index}}">
+						<div class="steps__title">{{item.title | safe}}</div>
+						<div class="steps__description">{{item.description | safe}}</div>
+						<div class="steps__item-circle"></div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="steps__progress">
+		<div class="steps__progress-line" data-step="line">
+			<div class="steps__progress-in" data-step="in">
+				<div class="steps__progress-row">
+					{% for item in customSteps or steps %}
+						<div class="steps__progress-circle"></div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end steps -->

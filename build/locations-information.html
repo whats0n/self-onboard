@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Locations Information</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="main">
+      <!-- begin steps -->
+      <div class="steps ">
+        <!-- states: disabled, active, done -->
+        <div class="steps__header">
+          <ul class="steps__list">
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="1">
+                <div class="steps__title">Company information</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="2">
+                <div class="steps__title">Contact information</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="3">
+                <div class="steps__title">Contract details</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="4">
+                <div class="steps__title">Email confirmation</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="5">
+                <div class="steps__title">Sales Order Form</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="active" data-step="6">
+                <div class="steps__title">Location information</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="7">
+                <div class="steps__title">Payment details</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="steps__progress">
+          <div class="steps__progress-line" data-step="line">
+            <div class="steps__progress-in" data-step="in">
+              <div class="steps__progress-row">
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end steps -->
+      <div class="main__document">
+        <div class="main__body">
+          <table class="table table_locations-information">
+            <thead>
+              <tr>
+                <th class="table__number">#</th>
+                <th class="table__sales-portal-id">Sales portal id</th>
+                <th class="table__dealer-code">Dealer code</th>
+                <th class="table__street">Street</th>
+                <th class="table__city">City</th>
+                <th class="table__state">State</th>
+                <th class="table__zip">Zip</th>
+                <th class="table__btn"></th>
+                <th class="table__btn"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <input type="text" class="input" value="34315">
+                </td>
+                <td>
+                  <input type="text" class="input" value="0018000001LWybAAAT">
+                </td>
+                <td>65A Westchester Square</td>
+                <td>Bronx</td>
+                <td>NY</td>
+                <td>10461</td>
+                <td>
+                  <button class="btn btn_block">Clear</button>
+                </td>
+                <td>
+                  <button class="btn btn_primary btn_block">Submit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <input type="text" class="input" value="">
+                </td>
+                <td>
+                  <input type="text" class="input" value="">
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                  <button class="btn btn_block">Clear</button>
+                </td>
+                <td>
+                  <button class="btn btn_primary btn_block">Submit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="footer main__footer">
+          <div class="footer__box">
+            <button class="btn btn_lg btn_red" data-animation="ripple">Cancel</button>
+          </div>
+          <div class="footer__box">
+            <button class="btn btn_lg btn_primary" data-step-direction="prev" data-animation="ripple-white">Previous</button>
+            <button class="btn btn_lg btn_primary" data-step-direction="next" data-animation="ripple-white">Next</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

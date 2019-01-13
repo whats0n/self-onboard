@@ -14,8 +14,28 @@
   <body>
 
     <!-- BEGIN content -->
-    <div class="out">
-      {% block content %}{% endblock %}
+    <div class="main">
+      {% include 'partials/_steps.html' %}
+      <div class="main__document">
+        <div class="main__body">
+          {% block content %}{% endblock %}
+        </div>
+        <footer class="footer main__footer">
+          <div class="footer__box">
+            {% if not noCancel %}
+              <button class="btn btn_lg btn_red" data-animation="ripple">Cancel</button>
+            {% endif %}
+          </div>
+          <div class="footer__box">
+            {% if not noPrev %}
+              <button class="btn btn_lg btn_primary" data-step-direction="prev" data-animation="ripple-white">Previous</button>
+            {% endif %}
+            {% if not noNext %}
+              <button class="btn btn_lg btn_primary" data-step-direction="next" data-animation="ripple-white">Next</button>
+            {% endif %}
+          </div>
+        </footer>
+      </div>
     </div>
     <!-- END content -->
 

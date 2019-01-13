@@ -21,7 +21,7 @@
   transform: translate3d(0,0,0)
 
 =md
-  +r(1023)
+  +r(979)
     @content
 
 =sm
@@ -31,3 +31,14 @@
 =xs
   +r(599)
     @content
+
+
+=f($font-size: null, $font-weight: null, $line-height: null, $letter-spacing: null)
+  @if $font-size != null
+    font-size: $font-size
+  @if $font-weight != null
+    font-weight: $font-weight
+  @if $line-height != null
+    line-height: $line-height
+  @if $letter-spacing != null
+    letter-spacing: ($letter-spacing / 1000) * 1em

@@ -1,0 +1,54 @@
+.checkbox
+	position: relative
+	display: inline-block
+	vertical-align: top
+	min-width: 30px
+	min-height: 30px
+	+nosel
+	&_middle
+		.checkbox
+			&__text
+				padding-top: 5px
+				padding-bottom: 5px
+	input
+		display: none
+		&:checked
+			~ .checkbox
+				&__icon
+					.icon
+						opacity: 1
+		&:disabled
+			~ .checkbox
+				&__icon,
+				&__text
+					opacity: 0.5
+					cursor: not-allowed
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+		border: 1px solid #ccc
+		border-radius: 3px
+		width: 30px
+		height: 30px
+		background: $white
+		cursor: pointer
+		transition: border-color 0.25s
+		.icon
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			opacity: 0
+			fill: $darkGray
+			font-size: 14px
+			transform: translate3d(-50%,-50%,0)
+			transition: opacity 0.25s, background 0.25s
+	&__text
+		display: inline-block
+		vertical-align: top
+		padding: 5px 0 5px 40px
+		cursor: pointer
+		color: lighten($darkGray, 30%)
+		+f(16px, 400, 20px)
+		transition: color 0.25s

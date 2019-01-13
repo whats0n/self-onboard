@@ -1,0 +1,88 @@
+---
+title: Contract Details
+activeStep: 3
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="form">
+		<div class="form__row">
+			<div class="form__col">
+				{{mixins.field({
+					for: 'packagetype',
+					label: 'Package Type',
+					mixins: {
+						type: 'select',
+						props: {
+							id: 'packagetype',
+							options: [
+								'Plus - $85'
+							]
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'termofservice',
+					label: 'Term Of Service',
+					mixins: {
+						type: 'select',
+						props: {
+							id: 'termofservice',
+							placeholder: 'Select Term Of Service',
+							options: [
+								'12 Month',
+								'24 Month'
+							]
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'numberofstores',
+					label: 'Number of stores',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Number of Stores',
+							title: 'Please enter your Number of Stores',
+							id: 'numberofstores'
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'paymentplan',
+					label: 'Payment plan',
+					mixins: {
+						type: 'select',
+						props: {
+							id: 'paymentplan',
+							options: [
+								'Monthly'
+							]
+						}
+					}
+				})}}
+			</div>
+			<div class="form__col">
+				{{mixins.field({
+					for: 'startdate',
+					label: 'Billing Start Date',
+					mixins: {
+						type: 'input',
+						props: {
+							placeholder: 'Billing Start Date',
+							title: 'Please enter Charge start Date',
+							id: 'startdate',
+							type: 'date'
+						}
+					}
+				})}}
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,193 @@
+---
+title: Payment Details
+activeStep: 6
+customSteps: [
+	{ title: 'Company information' },
+	{ title: 'Contact information' },
+	{ title: 'Contract details' },
+	{ title: 'Email confirmation' },
+	{ title: 'Sales Order Form' },
+	{ title: 'Payment details' }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="form">
+		<section class="form__section">
+			<div class="form__header">
+				<h2 class="title-lg form__title">Billing Address</h2>
+				<button class="btn btn_primary form__btn">Same as main address</button>
+			</div>
+			<div class="form__row">
+				<div class="form__col">
+					{{mixins.field({
+						for: 'addressline1',
+						label: 'Address Line 1',
+						mixins: {
+							type: 'input',
+							props: {
+								placeholder: 'Address Line 1',
+								title: 'Please enter your Address Line 1',
+								id: 'addressline1'
+							}
+						}
+					})}}
+				</div>
+				<div class="form__col">
+					{{mixins.field({
+						for: 'addressline2',
+						label: 'Address Line 2',
+						mixins: {
+							type: 'input',
+							props: {
+								placeholder: 'Address Line 2',
+								title: 'Please enter your Address Line 2',
+								id: 'addressline2'
+							}
+						}
+					})}}
+				</div>
+				<div class="form__col form__col_wide">
+					{{mixins.field({
+						for: 'state',
+						label: 'State',
+						mixins: {
+							type: 'select',
+							props: {
+								id: 'state',
+								placeholder: 'Select state',
+								options: [
+									'AL',
+									'AK',
+									'AZ',
+									'AR',
+									'CA',
+									'CO',
+									'CT',
+									'DE',
+									'NY'
+								]
+							}
+						}
+					})}}
+				</div>
+				<div class="form__col">
+					{{mixins.field({
+						for: 'city',
+						label: 'City',
+						mixins: {
+							type: 'input',
+							props: {
+								placeholder: 'City',
+								title: 'Please enter your City',
+								id: 'city'
+							}
+						}
+					})}}
+				</div>
+				<div class="form__col">
+					{{mixins.field({
+						for: 'zip',
+						label: 'ZIP',
+						mixins: {
+							type: 'input',
+							props: {
+								placeholder: 'ZIP',
+								title: 'Please enter your ZIP',
+								id: 'zip'
+							}
+						}
+					})}}
+				</div>
+				<div class="form__col form__col_wide">
+					{{mixins.field({
+						for: 'country',
+						label: 'Country',
+						mixins: {
+							type: 'select',
+							props: {
+								id: 'country',
+								options: [
+									'United States'
+								]
+							}
+						}
+					})}}
+				</div>
+			</div>
+		</section>
+		<section class="form__section">
+			<div class="form__header">
+				<h2 class="title-lg form__title">Payment method</h2>
+			</div>
+			<div class="form__row">
+				<div class="form__col">
+					{{mixins.field({
+						for: 'firstname',
+						label: 'First Name',
+						mixins: {
+							type: 'input',
+							props: {
+								placeholder: 'First Name',
+								title: 'Please enter your First Name',
+								id: 'firstname'
+							}
+						}
+					})}}
+				</div>
+				<div class="form__col">
+					{{mixins.field({
+						for: 'lastname',
+						label: 'Last Name',
+						mixins: {
+							type: 'input',
+							props: {
+								placeholder: 'Last Name',
+								title: 'Please enter your Last Name',
+								id: 'lastname'
+							}
+						}
+					})}}
+				</div>
+				<div class="form__col">
+					{{mixins.field({
+						for: 'cardnumber',
+						label: 'Card Number',
+						mixins: {
+							type: 'input',
+							props: {
+								placeholder: 'Card Number',
+								title: 'Please enter your Card Number',
+								id: 'cardnumber'
+							}
+						}
+					})}}
+				</div>
+				<div class="form__col form__col_wide">
+					{{mixins.field({
+						for: 'expiration-date',
+						label: 'Expiration date',
+						mixins: {
+							type: 'expirationDate'
+						}
+					})}}
+				</div>
+				<div class="form__col form__col_wide">
+					{{mixins.field({
+						for: 'cvv',
+						label: 'Security Code',
+						mixins: {
+							type: 'input',
+							props: {
+								placeholder: 'Security Code',
+								title: 'Please enter your Security Code',
+								id: 'cvv'
+							}
+						}
+					})}}
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}

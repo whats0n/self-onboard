@@ -1,0 +1,35 @@
+---
+title: Sales Order Form
+activeStep: 5
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<table class="table table_sales-order-form">
+	  <thead>
+	    <tr>
+	      <th class="table__product-name">Product name</th>
+	      <th class="table__price">Price</th>
+	      <th class="table__quantity">Quantity</th>
+	      <th class="table__total-amount">Total amount</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>Multi Prepaid Premium Package</td>
+	      <td>$100.00</td>
+	      <td>2</td>
+	      <td>$200.00</td>
+	    </tr>
+	    <tr>
+	      <td>Metro PCS Setup Fee</td>
+	      <td>$130.00</td>
+	      <td>2</td>
+	      <td>$260.00</td>
+	    </tr>
+	  </tbody>
+	</table>
+	{{mixins.checkbox({
+		text: 'Check here to indicate that you have read and agree to the Terms and Conditions'
+	})}}
+{% endblock %}

@@ -1,0 +1,38 @@
+.table
+	table-layout: fixed
+	border: 1px solid #dee2e6
+	&:not(:last-child)
+		margin-bottom: 30px
+	th,
+	td
+		vertical-align: top
+		padding: .75em
+		text-align: left
+		font-size: 16px
+	td
+		border-top: 1px solid #dee2e6
+	th
+		background: #dee2e6
+		text-transform: uppercase
+	tbody + tbody
+		border-top: (2 * 1px) solid #dee2e6
+	&_sales-order-form
+		.table
+			&__price,
+			&__quantity,
+			&__total-amount
+				width: 18%
+			&__product-name
+				width: 46%
+	&_locations-information
+		.table
+			&__number
+				width: 40px
+			&__city,
+			&__zip,
+			&__state
+				width: 100px
+			&__btn
+				width: 110px
+			&__street
+				width: 130px

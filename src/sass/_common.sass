@@ -1,5 +1,31 @@
+*
+	font-family: 'Roboto', Arial, sans-serif
+html,
+body,
+.main
+	position: relative
+
 body
-	background: #FFF
-	+css-lock(16, 50, 600, 1000)
+	min-width: 980px
+	color: $text
+	background: $white
+	font-size: 14px
 	line-height: 1.4
 
+.main
+	margin: 0 auto
+	max-width: 1200px
+
+.title-lg
+	color: $darkGray
+	+f(28px, 700, 1.2)
+
+//text mods
+.text-uppercase
+	text-transform: uppercase
+
+.color-red
+	color: $red
+
+.color-green
+	color: $green

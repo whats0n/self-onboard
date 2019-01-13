@@ -1,0 +1,116 @@
+.steps
+	position: relative
+	padding: 20px
+	color: #c1c1c1
+	font-size: 0
+	&__header
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 13px
+			margin-bottom: -2px
+			border-bottom: 4px solid #c1c1c1
+			width: 100%
+	&__list
+		display: table
+		table-layout: fixed
+		width: 100%
+	&__item
+		position: relative
+		z-index: 1
+		display: table-cell
+		vertical-align: bottom
+		table-layout: fixed
+		overflow: hidden
+		font-size: 14px
+		text-align: center
+		&:last-child
+			.steps__icon-active:after
+				width: 50%
+	&__in
+		display: block
+		color: #c1c1c1
+		&:hover
+			.steps__title,
+			.steps__description
+				color: $primary
+		&[data-step-state*="active"]
+			.steps__title,
+			.steps__description
+				color: $primary
+			.steps__icon-in,
+			.steps__icon-active
+				transition-delay: 0.25s
+			.steps__icon-in
+				transform: translate3d(calc(-50% + 13px),0,0)
+			.steps__icon-active
+				transform: translate3d(calc(50% - 13px),0,0)
+		&[data-step-state*="done"]
+			.steps__icon-in,
+			.steps__icon-active
+				+gpu
+	&__title,
+	&__description
+		+text-overflow
+		transition: color 0.225s ease-in-out
+	&__title
+		font-size: 18px
+		font-weight: 500
+		line-height: 24px
+	&__description
+		height: 18px
+		font-size: 16px
+		font-weight: 300
+		line-height: 18px
+	&__item-circle,
+	&__progress-circle
+		&:before
+			content: ''
+			display: block
+			margin: 0 auto
+			border-radius: 50%
+			width: 26px
+			height: 26px
+	&__item-circle
+		&:before
+			background: #c1c1c1
+	&__progress-circle
+		&:before
+			background: $primary
+	&__item-circle
+		margin-top: 8px
+	&__progress
+		position: absolute
+		z-index: 1
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 20px
+		color: $primary
+		pointer-events: none
+		&-line,
+		&-in
+			transition: transform 0.3s ease-in-out
+		&-line
+			overflow: hidden
+			transform: translateX(-100%)
+		&-in
+			position: relative
+			transform: translateX(100%)
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 13px
+				margin-bottom: -2px
+				border-bottom: 4px solid $primary
+				width: 100%
+		&-row
+			display: table
+			table-layout: fixed
+			width: 100%
+		&-circle
+			display: table-cell
+			vertical-align: top

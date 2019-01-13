@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sales Order Form</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="main">
+      <!-- begin steps -->
+      <div class="steps ">
+        <!-- states: disabled, active, done -->
+        <div class="steps__header">
+          <ul class="steps__list">
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="1">
+                <div class="steps__title">Company information</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="2">
+                <div class="steps__title">Contact information</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="3">
+                <div class="steps__title">Contract details</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="4">
+                <div class="steps__title">Email confirmation</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="active" data-step="5">
+                <div class="steps__title">Sales Order Form</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+            <li class="steps__item">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="6">
+                <div class="steps__title">Payment details</div>
+                <div class="steps__description"></div>
+                <div class="steps__item-circle"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="steps__progress">
+          <div class="steps__progress-line" data-step="line">
+            <div class="steps__progress-in" data-step="in">
+              <div class="steps__progress-row">
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+                <div class="steps__progress-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end steps -->
+      <div class="main__document">
+        <div class="main__body">
+          <table class="table table_sales-order-form">
+            <thead>
+              <tr>
+                <th class="table__product-name">Product name</th>
+                <th class="table__price">Price</th>
+                <th class="table__quantity">Quantity</th>
+                <th class="table__total-amount">Total amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Multi Prepaid Premium Package</td>
+                <td>$100.00</td>
+                <td>2</td>
+                <td>$200.00</td>
+              </tr>
+              <tr>
+                <td>Metro PCS Setup Fee</td>
+                <td>$130.00</td>
+                <td>2</td>
+                <td>$260.00</td>
+              </tr>
+            </tbody>
+          </table>
+          <label class="checkbox ">
+            <input type="checkbox">
+            <span class="checkbox__icon">
+              <svg class="icon icon-check ">
+                <use xlink:href="img/sprite.svg#icon-check"></use>
+              </svg>
+            </span>
+            <span class="checkbox__text">Check here to indicate that you have read and agree to the Terms and Conditions</span>
+          </label>
+        </div>
+        <footer class="footer main__footer">
+          <div class="footer__box">
+            <button class="btn btn_lg btn_red" data-animation="ripple">Cancel</button>
+          </div>
+          <div class="footer__box">
+            <button class="btn btn_lg btn_primary" data-step-direction="prev" data-animation="ripple-white">Previous</button>
+            <button class="btn btn_lg btn_primary" data-step-direction="next" data-animation="ripple-white">Next</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

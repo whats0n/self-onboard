@@ -1,0 +1,23 @@
+---
+title: Confirm Your Email
+activeStep: 4
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="confirmation">
+		<div class="alert alert_warning confirmation__alert">
+			<p>Confirmation email was sent. Please confirm your email, to proceed with registration</p>
+			<p>Please do not close this page. If you can't find your Email, please check it in Spam folder.</p>
+			<p>If you doesn't receive your Email in 5 mins please try to Resend it</p>
+		</div>
+		<div class="confirmation__controls">
+			<div class="confirmation__control">
+				<button class="btn btn_primary">Resend Email</button>
+			</div>
+			<div class="confirmation__control">
+				<button class="btn btn_primary">Confirm Email</button>
+			</div>
+		</div>
+	</div>
+{% endblock %}
