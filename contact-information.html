@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Contact Information</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -18,15 +18,15 @@
         <div class="steps__header">
           <ul class="steps__list">
             <li class="steps__item">
-              <a href="#" class="steps__in" data-step-state="active" data-step="1">
+              <a href="#" class="steps__in" data-step-state="disabled" data-step="1">
                 <div class="steps__title">Company information</div>
                 <div class="steps__description"></div>
                 <div class="steps__item-circle"></div>
               </a>
             </li>
             <li class="steps__item">
-              <a href="#" class="steps__in" data-step-state="disabled" data-step="2">
-                <div class="steps__title">Contract Information</div>
+              <a href="#" class="steps__in" data-step-state="active" data-step="2">
+                <div class="steps__title">Contact information</div>
                 <div class="steps__description"></div>
                 <div class="steps__item-circle"></div>
               </a>
@@ -83,70 +83,85 @@
             <div class="form__row">
               <div class="form__col">
                 <div class="field">
-                  <label class="label field__label" for="username">User Name</label>
+                  <label class="label field__label" for="mainphone">Main Phone:</label>
                   <div class="field__control">
-                    <input type="text" class="input" id="username" placeholder="User Name">
+                    <input type="text" class="input" id="mainphone" placeholder="Main Phone">
                   </div>
                 </div>
               </div>
               <div class="form__col">
                 <div class="field">
-                  <label class="label field__label" for="firstname">First Name</label>
+                  <label class="label field__label" for="mobilephone">Mobile Phone:</label>
                   <div class="field__control">
-                    <input type="text" class="input" id="firstname" placeholder="First Name">
-                  </div>
-                </div>
-              </div>
-              <div class="form__col">
-                <div class="field">
-                  <label class="label field__label" for="lastname">Last Name</label>
-                  <div class="field__control">
-                    <input type="text" class="input" id="lastname" placeholder="Last Name">
-                  </div>
-                </div>
-              </div>
-              <div class="form__col">
-                <div class="field">
-                  <label class="label field__label" for="companyname">Company Name</label>
-                  <div class="field__control">
-                    <input type="text" class="input" id="companyname" placeholder="Company Name">
+                    <input type="text" class="input" id="mobilephone" placeholder="Mobile Phone">
                   </div>
                 </div>
               </div>
               <div class="form__col form__col_wide">
                 <div class="field">
-                  <label class="label field__label" for="ein">Employee Identification Number</label>
+                  <label class="label field__label" for="email">Email address:</label>
                   <div class="field__control">
-                    <input type="text" class="input" id="ein" placeholder="Employee Identification Number">
+                    <input type="email" class="input" id="email" placeholder="name@example.com">
                   </div>
                 </div>
               </div>
               <div class="form__col">
                 <div class="field">
-                  <label class="label field__label" for="selectproduct">Choose Product</label>
+                  <label class="label field__label" for="addressline1">Address Line 1:</label>
                   <div class="field__control">
-                    <select class="select" id="selectproduct">
-                      <option selected>Select product</option>
-                      <option value="Wireless Standard Metro by T-Mobile">Wireless Standard Metro by T-Mobile</option>
-                      <option value="Elevate Exclusive">Elevate Exclusive</option>
-                      <option value="Wireless Standard Tracfone Exclusive">Wireless Standard Tracfone Exclusive</option>
-                      <option value="Multi Carrier">Multi Carrier</option>
+                    <input type="text" class="input" id="addressline1" placeholder="Address Line 1">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="addressline2">Address Line 2:</label>
+                  <div class="field__control">
+                    <input type="text" class="input" id="addressline2" placeholder="Address Line 2">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="state">State:</label>
+                  <div class="field__control">
+                    <select class="select" id="state">
+                      <option selected>Select state</option>
+                      <option value="AL">AL</option>
+                      <option value="AK">AK</option>
+                      <option value="AZ">AZ</option>
+                      <option value="AR">AR</option>
+                      <option value="CA">CA</option>
+                      <option value="CO">CO</option>
+                      <option value="CT">CT</option>
+                      <option value="DE">DE</option>
+                      <option value="NY">NY</option>
                     </select>
                   </div>
                 </div>
               </div>
               <div class="form__col">
                 <div class="field">
-                  <label class="label field__label" for="masterdealer">Choose Master Dealer</label>
+                  <label class="label field__label" for="city">City:</label>
                   <div class="field__control">
-                    <select class="select" id="masterdealer">
-                      <option selected>Select Master </option>
-                      <option value="I don&#39;t have Master Dealer">I don&#39;t have Master Dealer</option>
-                      <option value="Amaritel">Amaritel</option>
-                      <option value="AWI">AWI</option>
-                      <option value="Actify">Actify</option>
-                      <option value="Hyperlink">Hyperlink</option>
-                      <option value="VIP">VIP</option>
+                    <input type="text" class="input" id="city" placeholder="City">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="zip">ZIP:</label>
+                  <div class="field__control">
+                    <input type="text" class="input" id="zip" placeholder="ZIP">
+                  </div>
+                </div>
+              </div>
+              <div class="form__col">
+                <div class="field">
+                  <label class="label field__label" for="country">Country:</label>
+                  <div class="field__control">
+                    <select class="select" id="country">
+                      <option value="United States">United States</option>
                     </select>
                   </div>
                 </div>
@@ -159,7 +174,8 @@
             <button class="btn btn_lg btn_red" data-animation="ripple">Cancel</button>
           </div>
           <div class="footer__box">
-            <button class="btn btn_lg btn_darkgray" data-step-direction="next" data-animation="ripple-white">Next</button>
+            <button class="btn btn_lg btn_primary" data-step-direction="prev" data-animation="ripple-white">Previous</button>
+            <button class="btn btn_lg btn_primary" data-step-direction="next" data-animation="ripple-white">Next</button>
           </div>
         </footer>
       </div>
